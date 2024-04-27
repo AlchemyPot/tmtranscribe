@@ -7,5 +7,9 @@ Navigate to this project's folder, open a terminal in the current directory, ins
 The GUI is self explanatory:
 
 - Select a folder or a number of files
-- Select your model (tiny,base,medium,large,large-v2,large-v3)
+- Select your model (tiny,base,small,medium,large,large-v2,large-v3)
 - Click on transcribe to generate the `.srt` next to each file
+
+# Recommended parameters (WIP)
+
+- model: large-v2
