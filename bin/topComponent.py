@@ -60,7 +60,7 @@ def create_top_frame(root):
     topFrame.grid_rowconfigure(0, weight=1)
     topFrame.grid_rowconfigure(1, weight=1)
     
-    topFrame.grid(row=0, column=0, columnspan=3, sticky='new', padx=10 ,pady=(10, 0))
+    topFrame.grid(row=0, column=0, sticky='new', padx=10 ,pady=(10, 0))
 
     listbox = create_listbox(topFrame)
     create_select_folder_button(topFrame, listbox)
