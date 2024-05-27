@@ -69,6 +69,8 @@ def create_whisper_button(root, listBox, topListBox, progressBar, modelSelector,
     button.config(command=start_whisper)
     return button
 
+def create_language_selector(root):
+    
 def create_model_selector(root):
     models = ['tiny', 'base', 'small', 'medium', 'large', 'large-v2', 'large-v3']
 
@@ -81,7 +83,7 @@ def create_model_selector(root):
     model_label.pack(side="top")
 
     modelSelector = Combobox(model_frame, values=models)
-    modelSelector.current(1)
+    modelSelector.current(6)
 
     # Place the combobox in the frame, to the right of the label
     modelSelector.pack(side="top")
@@ -100,7 +102,7 @@ def create_batch_selector(root):
     batch_label.pack(side="top")
 
     batchSelector = Combobox(batch_frame, values=batch_sizes)
-    batchSelector.current(2)
+    batchSelector.current(3)
 
     # Place the combobox in the frame, to the right of the label
     batchSelector.pack(side="top")

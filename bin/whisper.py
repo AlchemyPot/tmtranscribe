@@ -17,7 +17,7 @@ def is_model_downloaded(model_name):
     return os.path.isdir(model_path)
 
 def load_and_transcribe_model(audio_file, selectedModel, device, batch_size, compute_type):
-    model = whisperx.load_model(selectedModel, device, compute_type=compute_type)
+    model = whisperx.load_model(selectedModel, device, compute_type=compute_type, language="en")
     print(f"Using whisper model: {selectedModel}, Device: {device}, Compute Type: {compute_type}, Batch Size: {batch_size}")
     print(f"Transcribing {audio_file}")
     audio = whisperx.load_audio(audio_file)
