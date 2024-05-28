@@ -69,8 +69,8 @@ def create_whisper_button(root, listBox, topListBox, progressBar, modelSelector,
     button.config(command=start_whisper)
     return button
 
-def create_language_selector(root):
-    
+# def create_language_selector(root):
+
 def create_model_selector(root):
     models = ['tiny', 'base', 'small', 'medium', 'large', 'large-v2', 'large-v3']
 

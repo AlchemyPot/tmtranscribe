@@ -14,14 +14,12 @@ The GUI is self explanatory:
 - Select a folder or a number of files
 - Select your model (tiny,base,small,medium,large,large-v2,large-v3)
 - Click on transcribe to generate the `.srt` next to each file
-- If the model is not present in your .cache folder it will first be downloaded. This is done automatically by whisperx and will make your first run slower
+- If the model is not present in your .cache folder it will first be downloaded. This is done automatically by Whisperx and will make your first run slower
 
 # Recommended parameters (WIP)
 
 You can find a model comparison here: https://github.com/openai/whisper?tab=readme-ov-file#available-models-and-languages
 
-- model: large-v3 (admitedly lower error rate than v2). In you are low in memory or require faster processing only then you might trade off accuracy for performance by downgrading to medium down to tiny.
-
-# To do
-
-- Add a checkbox that allows you to skip files that already have a subtitle file associated with them
+- model: large-v3 (admittedly has a lower error rate than v2). If you are low in memory or require faster processing only then you might want to trade off accuracy for performance by downgrading to medium down to tiny. Other than that, I recommend sticking with large-v3
+- batch size: Choose a higher batch size to improve performance when you have a powerful GPU. Lower the batch size if you run into CUDA memory issues
+- compute type: float16 is the recommended value. Downgrade to int8 to if you are getting CUDA memory issues at the cost of decreasing the accuracy
